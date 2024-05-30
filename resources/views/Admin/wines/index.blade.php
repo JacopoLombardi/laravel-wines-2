@@ -21,6 +21,7 @@
                         <th scope="col">Voto Medio</th>
                         <th scope="col">Voti Totali</th>
                         <th scope="col">Paese di origine</th>
+                        <th scope="col">Aromi</th>
                         <th scope="col">Azione</th>
                     </tr>
                 </thead>
@@ -33,6 +34,11 @@
                         <td>{{$wine->rating_average}}</td>
                         <td>{{$wine->rating_reviews}}</td>
                         <td>{{$wine->location}}</td>
+                        <td>
+                            @foreach ($wine->aromas as $aroma)
+                                <a href="{{route('admin.aroma_wine', $aroma)}}"><span class="badge text-bg-primary">{{$aroma->name}}</span></a>
+                            @endforeach
+                        </td>
 
                         <td>
                             <div class="d-flex">
