@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Wine extends Model
 {
     use HasFactory;
-    public function Aromas(){
+    public function aromas(){
         return $this->belongsToMany(Aroma::class);
 
     }

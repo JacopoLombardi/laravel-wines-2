@@ -9,7 +9,7 @@ class Aroma extends Model
 {
     use HasFactory;
 
-    public function Wines(){
+    public function wines(){
         return $this->belongsToMany(Wine::class);
 
     }

@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             WinesTableSeeder::class,
+            AromasTableSeeder::class,
+            AromaWineTableSeeder::class
         ]);
     }
 }

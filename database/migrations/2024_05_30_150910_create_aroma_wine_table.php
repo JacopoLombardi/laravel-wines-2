@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('wine_aroma', function (Blueprint $table) {
+        Schema::create('aroma_wine', function (Blueprint $table) {
 
             $table->unsignedBigInteger('wine_id');
             $table->foreign('wine_id')
-                    ->reference('id')
+                    ->references('id')
                     ->on('wines')
                     ->cascadeOnDelete();
             $table->unsignedBigInteger('aroma_id');
             $table->foreign('aroma_id')
-                    ->reference('id')
+                    ->references('id')
                     ->on('aromas')
                     ->cascadeOnDelete();
 
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('wine_aroma');
+        Schema::dropIfExists('aroma_wine');
     }
 };
