@@ -44,23 +44,14 @@
             <div class="col col-6">
                 <div class="mb-3 m-3">
                     <label for="image" class="form-label fw-bold">Image</label>
-                    <input
-                      name="image"
-                      type="file"
-                      class="form-control"
-                      onchange="showImage(event)"
-                      @error('image')
-                            is-invalid
-                        @enderror
-                      id="image"
-                      value="{{ old('image') }}">
-
+                    <input name="image" type="file" class="form-control" onchange="showImage(event)" @error('image') is-invalid @enderror id="image" value="{{ old('image') }}">
                       @error('image')
                         <small class="text-danger">
                             {{ $message }}
                         </small>
                     @enderror
                 </div>
+                <img class="thumb" id="thumb" src="/img/imagenotfound.jpg" alt="imagenotfound">
             </div>
         </div>
 
@@ -153,7 +144,7 @@
 
 <script>
     function showImage(event){
-        const thumb = document.getElementById('image')
+        const thumb = document.getElementById('thumb')
         thumb.src = URL.createObjectURL(event.target.files[0]);
     }
 </script>
