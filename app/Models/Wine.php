@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Wine extends Model
 {
     use HasFactory;
+    public function Aromas(){
+        return $this->belongsToMany(Aroma::class);
+
+    }
 
     protected $fillable = [
         'wine',
