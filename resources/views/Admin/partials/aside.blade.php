@@ -3,14 +3,14 @@
         <ul class="d-flex flex-column align-items-start mt-3">
             <div>
                 <li>
-                    <a href="{{route('admin.wines.index')}}">
+                    <a href="{{ route('admin.home') }}">
                         <i class="fa-solid fa-house"></i>
                         <span>Home</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="{{route('admin.wines.index')}}">
                         <i class="fa-solid fa-wine-bottle"></i>
                         <span>Wine</span>
                     </a>
