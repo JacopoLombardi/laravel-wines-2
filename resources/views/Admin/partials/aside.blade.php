@@ -32,7 +32,7 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="{{route('')}}">
                         <i class="fa-solid fa-wind"></i>
                         <span>Aroma</span>
                     </a>
