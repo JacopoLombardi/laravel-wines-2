@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Wine;
+use App\Functions\Helper as Help;
+
 
 class WinesTableSeeder extends Seeder
 {
@@ -20,6 +22,7 @@ class WinesTableSeeder extends Seeder
             $new_wine = new Wine();
             $new_wine->winery = $wine->winery;
             $new_wine->wine = $wine->wine;
+            $new_wine->slug = Help::createSlug($new_wine->wine, Wine::class);
             $new_wine->rating_average = $wine->rating->average;
             $new_wine->rating_reviews = $wine->rating->reviews;
             $new_wine->location = $wine->location;

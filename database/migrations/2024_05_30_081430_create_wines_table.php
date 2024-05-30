@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('winery', 50);
             $table->string('wine', 100);
+            $table->string('slug', 100)->unique();
             $table->decimal('rating_average', 2, 1);
             $table->string('rating_reviews');
             $table->string('location');
