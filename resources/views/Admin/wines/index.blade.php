@@ -36,7 +36,7 @@
                         <td>{{$wine->location}}</td>
                         <td>
                             @foreach ($wine->aromas as $aroma)
-                                <a href=""><span class="badge text-bg-primary">{{$aroma->name}}</span></a>
+                                <a href="{{route('admin.aroma_wine', $aroma)}}"><span class="badge text-bg-primary">{{$aroma->name}}</span></a>
                             @endforeach
                         </td>
 

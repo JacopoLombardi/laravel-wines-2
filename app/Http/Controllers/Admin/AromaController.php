@@ -13,9 +13,15 @@ class AromaController extends Controller
      */
     public function index()
     {
-        $aromas = Aroma::all();
-        $wines = Aroma::all();
-        return view('Admin.aroma.index', compact ('aromas','wines'));
+
+        // $aromas=Aroma::All();
+        $aromas = Aroma::orderByDesc('id')->get();
+
+        return view('admin.technologies.index', compact('aromas'));
+    }
+    public function aromaWines(Aroma $aroma){
+        $wines = $aroma->wine;
+        return view('Admin.aroma.aroma-wine',compact('wines','aroma'));
     }
 
     /**

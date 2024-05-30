@@ -11,13 +11,13 @@
                 <a class="nav-link active text-white" aria-current="page" href="{{route('home')}}">Home</a>
               </li>
 
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="#">I Nostri Vini</a>
               </li>
 
                <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="#">Contatti</a>
-              </li>
+              </li> --}}
 
             </ul>
           </div>

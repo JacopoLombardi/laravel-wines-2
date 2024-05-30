@@ -32,7 +32,7 @@
                 </li>
 
                 <li>
-                    <a href="{{route('')}}">
+                    <a href="{{route('admin.aroma_wine')}}">
                         <i class="fa-solid fa-wind"></i>
                         <span>Aroma</span>
                     </a>
