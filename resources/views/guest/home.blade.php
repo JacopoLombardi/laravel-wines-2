@@ -1,28 +1,33 @@
-@extends('layout.main')
-
+@extends('layouts.guest')
 
 @section('content')
     <div class="container mt-5">
         <div class="jumbotron text-center bg-dark text-white">
             <h1 class="display-4">Benvenuti alla nostra Enoteca!</h1>
             <p class="lead">Scopri i migliori vini selezionati per te</p>
-            {{-- <a href="{{ route('wines.index') }}" class="btn btn-primary btn-lg">Visita il nostro shop</a> --}}
+            <a href="#" class="btn btn-primary btn-lg">Visita il nostro shop</a>
+            {{-- {{ route('wines.index') }} --}}
         </div>
 
         <h2 class="text-center my-5 text-white">I Nostri Vini Selezionati</h2>
         <div class="row">
-            {{-- @foreach($wines as $wine)
+            {{-- @foreach($wines as $wine) --}}
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{{ asset('images/' . $wine->image) }}" class="card-img-top" alt="{{ $wine->name }}">
+                        <img src="" class="card-img-top" alt="">
+                        {{-- {{ asset('images/' . $wine->image) }} --}}
+                        {{-- {{ $wine->name }} --}}
                         <div class="card-body text-white">
-                            <h5 class="card-title">{{ $wine->name }}</h5>
-                            <p class="card-text">{{ $wine->description }}</p>
-                            <a href="{{ route('wines.show', $wine->id) }}" class="btn btn-primary">Scopri di più</a>
+                            <h5 class="card-title"></h5>
+                            {{-- {{ $wine->name }} --}}
+                            <p class="card-text"></p>
+                            {{-- {{ $wine->description }} --}}
+                            <a href="" class="btn btn-primary">Scopri di più</a>
+                            {{-- {{ route('wines.show', $wine->id) }} --}}
                         </div>
                     </div>
                 </div>
-            @endforeach --}}
+            {{-- @endforeach --}}
         </div>
 
         <h2 class="text-center my-5 text-white">I Nostri Servizi</h2>
@@ -47,7 +52,8 @@
         <h2 class="text-center my-5 text-white">Contattaci</h2>
         <div class="row">
             <div class="col-md-6 offset-md-3 ">
-                <form action="{{ route('wines.index') }}" method="POST">
+                <form action="" method="POST">
+                    {{-- {{ route('wines.index') }} --}}
                     @csrf
                     <div class="form-group text-white">
                         <label for="name">Nome</label>
