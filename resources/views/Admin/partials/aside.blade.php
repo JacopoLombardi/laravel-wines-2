@@ -17,7 +17,7 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="{{route('admin.wines.create')}}">
                         <i class="fa-solid fa-wine-glass"></i>
                         <span>Add New Wine</span>
                     </a>
