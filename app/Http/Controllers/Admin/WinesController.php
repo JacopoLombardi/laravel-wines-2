@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Wine;
+use App\Functions\Helper as Help;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class WinesController extends Controller
@@ -33,7 +36,16 @@ class WinesController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        if(array_key_exists('image', $data)){
+            $image_path = Storage::put('uploads', $data['image']);
+            $data['image'] = $image_path;
+        }
+
+
         $wine = new Wine();
+
+        $data['slug'] = Help::createSlug($data['wine'], new Wine());
 
         $wine->fill($data);
         $wine->save();

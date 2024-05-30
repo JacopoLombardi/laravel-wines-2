@@ -12,6 +12,7 @@ class Wine extends Model
     protected $fillable = [
         'wine',
         'winery',
+        'slug',
         'rating_average',
         'rating_reviews',
         'location',

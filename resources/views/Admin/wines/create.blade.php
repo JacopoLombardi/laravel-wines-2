@@ -15,7 +15,7 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.wines.store') }}" method="POST">
+    <form action="{{ route('admin.wines.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="row">
@@ -46,8 +46,9 @@
                     <label for="image" class="form-label fw-bold">Image</label>
                     <input
                       name="image"
-                      type="text"
+                      type="file"
                       class="form-control"
+                      onchange="showImage(event)"
                       @error('image')
                             is-invalid
                         @enderror
@@ -150,4 +151,13 @@
     </form>
 </div>
 
+<script>
+    function showImage(event){
+        const thumb = document.getElementById('image')
+        thumb.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
+
 @endsection
+
+
