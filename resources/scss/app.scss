@@ -4,7 +4,7 @@ header {
     height: 70px;
 }
 
-.main-wrapper {
+.wrapper {
     height: calc(100vh - 70px);
     .content {
         width: 100%;
@@ -12,7 +12,7 @@ header {
 }
 
 aside {
-    width: 12%;
+    width: 150px;
     ul {
         list-style: none;
         li {
