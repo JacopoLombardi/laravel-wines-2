@@ -15,10 +15,13 @@ class AromasTableSeeder extends Seeder
     public function run(): void
     {
         $aromas = json_decode(file_get_contents(__DIR__ . '/aromi-vini.json'));
-        foreach($aromas as $aroma ){
+        foreach($aromas->aromi as $aroma ){
+
            $new_aroma= new Aroma();
-           $new_aroma-> name= $aroma;
-           $new_aroma-> slug= Help::createSlug($new_aroma->name, Aroma::class);
+           $new_aroma->name= $aroma;
+
+
+
 
 
            $new_aroma->save();
